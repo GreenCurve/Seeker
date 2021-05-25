@@ -15,3 +15,16 @@ class molecule:
         for each in self.mol2_cont:
             for e in each:
                 print(e[:-1])
+
+    def parser(Path):
+        with open(Path, 'r') as f:
+            count = 0
+            Array = []
+            for mol2 in split_multimol2(Path):
+                count += 1
+                Call = "molecule " + str(count)
+                mol2_id = mol2[0]
+                mol2_cont = mol2[1:]
+                Call = molecule(mol2_id, mol2_cont)
+                Array.append(Call)
+            return Array
