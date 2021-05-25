@@ -31,4 +31,3 @@ class molecule:
                 Call = molecule(mol2_cont)
                 Array.append(Call)
             return Array
-            return Array
