@@ -11,4 +11,4 @@ from main import molecule
 Path = input("Введите путь к файлу: ") #C:\Users\Egor\Repo\input\ligands\mol2_F.mol2
 Number = int(input("какой номер хочешь посмотреть? "))
 Path = r"C:\Users\Egor\Repo\input\ligands\mol2_F.mol2" if Path == "" else Path
-print(molecule.parser(Path)[Number].show())
+molecule.parser(Path)
