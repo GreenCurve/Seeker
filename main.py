@@ -12,8 +12,6 @@ class molecule:
         self.mol2_cont = mol2_cont
     def show(self):
         print(self.mol2_cont)
-        for line in self.mol2_cont:
-            pass
 
 
     def parser(Path):
@@ -27,18 +25,18 @@ class molecule:
                 mol2_c = mol2[1:]
                 for line in mol2_c:
                     for Each in line:
-                        print(str(Each) + str(line[-1])) #пытаюсь найти конец файлы для корректной записи SubArray в конце
-                        if Each[:1] != '@':
-                            SubArray.append(Each[:-1] if Each [-1:] == '\n' else Each)
-                        elif SubArray == []: pass
-                        elif Each == line[-1]:
+                        if line[-1] == Each:
                             SubArray.append(Each[:-1] if Each[-1:] == '\n' else Each)
                             SnubArray.append(SubArray)
                             SubArray = []
+                        if Each[:1] != '@':
+                            SubArray.append(Each[:-1] if Each [-1:] == '\n' else Each)
+                        elif SubArray == []: pass
                         else:
                             SnubArray.append(SubArray)
                             SubArray = []
                     Call = 'molecule' + str(count)
                     Call = molecule(SnubArray)
                     Array.append(Call)
+            return Array
             return Array
