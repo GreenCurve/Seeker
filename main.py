@@ -29,7 +29,7 @@ class molecule:
                             SubArray.append(Each[:-1] if Each[-1:] == '\n' else Each)
                             SnubArray.append(SubArray)
                             SubArray = []
-                        if Each[:1] != '@':
+                        elif Each[:1] != '@':
                             SubArray.append(Each[:-1] if Each [-1:] == '\n' else Each)
                         elif SubArray == []: pass
                         else:
